@@ -3,7 +3,7 @@
 
 <h2>Coffee candidates</h2>
 <ul>
-  <li *ngFor="let candidate of (store.state$ | async).candidates">
+  <li *ngFor="let candidate of candidates$ | async">
     <span>{{ candidate.name }}</span>
     <span>Votes: {{ candidate.votes }}</span>
     <button (click)="store.addVote(candidate)">+</button>
